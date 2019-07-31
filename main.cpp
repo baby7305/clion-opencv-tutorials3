@@ -5,7 +5,7 @@ using namespace std;
 using namespace cv;
 
 int main() {
-    Mat srcImage = imread("../WechatIMG31.jpeg");
+    Mat srcImage = imread("/Users/songhaibei/图片测试/WechatIMG31.jpeg");
     if (!srcImage.data) {
         std::cout << "Image not loaded";
         return -1;
