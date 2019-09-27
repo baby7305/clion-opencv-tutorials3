@@ -3,7 +3,7 @@ project(clion_opencv_app)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(OpenCV_DIR "F:\\opencv4\\opencv\\build")
+set(OpenCV_DIR "C:\\opencv-vs-build\\opencv-3.4.7\\opencv\\build")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
