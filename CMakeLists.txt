@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable(colorDetection ./color/colorDetection.cpp ./color/colordetector.cpp)
 add_executable(extractObject ./color/extractObject.cpp)
+add_executable(huesaturation ./color/huesaturation.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(colorDetection ${OpenCV_LIBS})
 target_link_libraries(extractObject ${OpenCV_LIBS})
+target_link_libraries(huesaturation ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/boldt.jpg ${CMAKE_SOURCE_DIR}/images/girl.jpg)
