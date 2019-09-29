@@ -11,3 +11,13 @@ add_executable(clion_opencv_app main.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+
+
+SET(IMAGES ${CMAKE_SOURCE_DIR}/images/group.jpg
+        ${CMAKE_SOURCE_DIR}/images/binaryGroup.bmp
+        ${CMAKE_SOURCE_DIR}/images/mser.bmp
+        ${CMAKE_SOURCE_DIR}/images/road.jpg
+        ${CMAKE_SOURCE_DIR}/images/chariot.jpg)
+FILE(COPY ${IMAGES} DESTINATION .)
+FILE(COPY ${IMAGES} DESTINATION "Debug")
+FILE(COPY ${IMAGES} DESTINATION "Release")
