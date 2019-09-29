@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable(estimateF ./shadow/estimateF.cpp)
 add_executable(robustmatching ./shadow/robustmatching.cpp)
+add_executable(estimateH ./shadow/estimateH.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(estimateF ${OpenCV_LIBS})
 target_link_libraries(robustmatching ${OpenCV_LIBS})
+target_link_libraries(estimateH ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/church01.jpg
