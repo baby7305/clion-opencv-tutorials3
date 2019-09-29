@@ -9,10 +9,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
 add_executable(saltImage ./pixel/saltImage.cpp)
+add_executable(colorReduce ./pixel/colorReduce.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(saltImage ${OpenCV_LIBS})
+target_link_libraries(colorReduce ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/boldt.jpg ${CMAKE_SOURCE_DIR}/images/rain.jpg)
