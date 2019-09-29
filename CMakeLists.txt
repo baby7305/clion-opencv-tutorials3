@@ -12,6 +12,7 @@ add_executable(histograms ./histogram/histograms.cpp)
 add_executable(contentfinder ./histogram/contentfinder.cpp)
 add_executable(finder ./histogram/finder.cpp)
 add_executable(retrieve ./histogram/retrieve.cpp)
+add_executable(integral ./histogram/integral.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
@@ -19,6 +20,7 @@ target_link_libraries(histograms ${OpenCV_LIBS})
 target_link_libraries(contentfinder ${OpenCV_LIBS})
 target_link_libraries(finder ${OpenCV_LIBS})
 target_link_libraries(retrieve ${OpenCV_LIBS})
+target_link_libraries(integral ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/group.jpg
