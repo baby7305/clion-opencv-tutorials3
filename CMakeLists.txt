@@ -11,3 +11,16 @@ add_executable(clion_opencv_app main.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+
+
+SET(IMAGES ${CMAKE_SOURCE_DIR}/images/church01.jpg
+        ${CMAKE_SOURCE_DIR}/images/church02.jpg
+        ${CMAKE_SOURCE_DIR}/images/church03.jpg
+        ${CMAKE_SOURCE_DIR}/images/parliament1.jpg
+        ${CMAKE_SOURCE_DIR}/images/parliament2.jpg
+        ${CMAKE_SOURCE_DIR}/images/parliament3.jpg
+        ${CMAKE_SOURCE_DIR}/images/cookbook1.bmp
+        ${CMAKE_SOURCE_DIR}/images/objects.jpg)
+FILE(COPY ${IMAGES} DESTINATION .)
+FILE(COPY ${IMAGES} DESTINATION "Debug")
+FILE(COPY ${IMAGES} DESTINATION "Release")
