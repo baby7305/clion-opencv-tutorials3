@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable(morphology ./morphology/morphology.cpp)
 add_executable(segment ./morphology/segment.cpp)
+add_executable(mserFeatures ./morphology/mserFeatures.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(morphology ${OpenCV_LIBS})
 target_link_libraries(segment ${OpenCV_LIBS})
+target_link_libraries(mserFeatures ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/binary.bmp
