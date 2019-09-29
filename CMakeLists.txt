@@ -12,6 +12,7 @@ add_executable(clion_opencv_app main.cpp)
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 
+
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/group.jpg
         ${CMAKE_SOURCE_DIR}/images/waves.jpg
         ${CMAKE_SOURCE_DIR}/images/dog.jpg
