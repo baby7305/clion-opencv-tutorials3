@@ -9,10 +9,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
 add_executable(loadDisplaySave loadDisplaySave.cpp)
+add_executable(mat mat.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(loadDisplaySave ${OpenCV_LIBS})
+target_link_libraries(mat ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/puppy.bmp ${CMAKE_SOURCE_DIR}/images/smalllogo.png)
