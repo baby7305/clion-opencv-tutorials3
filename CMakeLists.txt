@@ -9,10 +9,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
 add_executable(derivatives ./filter/derivatives.cpp)
+add_executable(filters ./filter/filters.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(derivatives ${OpenCV_LIBS})
+target_link_libraries(filters ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/boldt.jpg ${CMAKE_SOURCE_DIR}/images/salted.bmp)
