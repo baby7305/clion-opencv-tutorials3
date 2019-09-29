@@ -8,9 +8,11 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
+add_executable(patches ./match/patches.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+target_link_libraries(patches ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/church01.jpg
