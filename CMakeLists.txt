@@ -9,10 +9,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
 add_executable(contours ./collect/contours.cpp)
+add_executable(blobs ./collect/blobs.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(contours ${OpenCV_LIBS})
+target_link_libraries(blobs ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/group.jpg
