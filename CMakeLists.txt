@@ -11,3 +11,17 @@ add_executable(clion_opencv_app main.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+
+
+SET(IMAGES ${CMAKE_SOURCE_DIR}/images/bench2.jpg
+        ${CMAKE_SOURCE_DIR}/images/soup1.jpg
+        ${CMAKE_SOURCE_DIR}/images/soup2.jpg
+        ${CMAKE_SOURCE_DIR}/images/brebeuf1.jpg
+        ${CMAKE_SOURCE_DIR}/images/brebeuf2.jpg
+        calib.xml)
+FILE(COPY ${IMAGES} DESTINATION .)
+FILE(COPY ${IMAGES} DESTINATION "Debug")
+FILE(COPY ${IMAGES} DESTINATION "Release")
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/chessboards/ DESTINATION ./chessboards/)
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/chessboards/ DESTINATION "Debug/chessboards/")
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/chessboards/ DESTINATION "Release/chessboards/")
