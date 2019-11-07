@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable( tracker ./tracking/tracker.cpp)
 add_executable( flow ./tracking/flow.cpp)
+add_executable( oTracker ./tracking/oTracker.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries( tracker ${OpenCV_LIBS})
 target_link_libraries( flow ${OpenCV_LIBS})
+target_link_libraries( oTracker ${OpenCV_LIBS})
 
 
 # copy required images to every directory with executable
