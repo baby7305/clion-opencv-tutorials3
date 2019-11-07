@@ -11,3 +11,13 @@ add_executable(clion_opencv_app main.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+
+
+# copy required images to every directory with executable
+SET(IMAGES ${CMAKE_SOURCE_DIR}/images/bike.avi)
+FILE(COPY ${IMAGES} DESTINATION .)
+FILE(COPY ${IMAGES} DESTINATION "Debug")
+FILE(COPY ${IMAGES} DESTINATION "Release")
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/goose/ DESTINATION ./goose/)
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/goose/ DESTINATION "Debug/goose/")
+FILE(COPY ${CMAKE_SOURCE_DIR}/images/goose/ DESTINATION "Release/goose/")
