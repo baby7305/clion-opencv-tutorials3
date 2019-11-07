@@ -8,9 +8,11 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
+add_executable( recognizeFace ./example/recognizeFace.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
+target_link_libraries( recognizeFace ${OpenCV_LIBS})
 
 
 # copy required images to every directory with executable
