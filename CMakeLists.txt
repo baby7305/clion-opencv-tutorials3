@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable(calibrate ./threeDimensional/calibrate.cpp ./threeDimensional/CameraCalibrator.cpp)
 add_executable(cameraPose ./threeDimensional/cameraPose.cpp)
+add_executable(estimateE ./threeDimensional/estimateE.cpp ./threeDimensional/triangulate.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(calibrate ${OpenCV_LIBS})
 target_link_libraries(cameraPose ${OpenCV_LIBS})
+target_link_libraries(estimateE ${OpenCV_LIBS})
 
 
 SET(IMAGES ${CMAKE_SOURCE_DIR}/images/bench2.jpg
