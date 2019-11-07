@@ -9,10 +9,12 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(clion_opencv_app main.cpp)
 add_executable(videoprocessing ./videoProcess/videoprocessing.cpp)
+add_executable(foreground ./videoProcess/foreground.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries(videoprocessing ${OpenCV_LIBS})
+target_link_libraries(foreground ${OpenCV_LIBS})
 
 
 # copy required images to every directory with executable
