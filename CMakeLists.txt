@@ -10,11 +10,13 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(clion_opencv_app main.cpp)
 add_executable( recognizeFace ./example/recognizeFace.cpp)
 add_executable( detectObjects ./example/detectObjects.cpp)
+add_executable( trainSVM ./example/trainSVM.cpp)
 
 
 target_link_libraries(clion_opencv_app ${OpenCV_LIBS})
 target_link_libraries( recognizeFace ${OpenCV_LIBS})
 target_link_libraries( detectObjects ${OpenCV_LIBS})
+target_link_libraries( trainSVM ${OpenCV_LIBS})
 
 
 # copy required images to every directory with executable
